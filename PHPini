@@ -1,0 +1,10 @@
+/* Secure PHP Installation */
+
+register_globals = Off
+allow_url_fopen = Off
+short_open_tag = Off
+display_errors = Off
+display_startup_errors = Off
+log_errors = On
+magic_quotes_gpc = Off
+magic_quotes_sybase = Off

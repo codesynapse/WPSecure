@@ -1,0 +1,86 @@
+# Disable directory browsing
+Options All -Indexes
+
+# Restrict access to sensitive files
+<Files .htaccess>
+Order Allow,Deny
+Deny from all
+Satisfy all
+</Files>
+
+# Add Password Authentication to wp-admin folder
+AuthUserFile /dev/null
+AuthGroupFile /dev/null
+AuthName “Access Control”
+AuthType Basic
+order deny,allow
+deny from all
+# whitelist home IP address
+allow from xxx.xxx.xxx.xxx
+# whitelist work IP address
+allow from xxy.xxy.xxy.xxy
+
+# Disable HTTP Trace Method
+RewriteEngine On
+RewriteCond %{REQUEST_METHOD} ^TRACE
+RewriteRule .* - [F]
+
+# Secure install.php
+<Files install.php>
+Order Allow, Deny
+Deny from all
+Satisfy all
+</Files>
+
+# Secure readme.html
+<Files readme.html>
+Order Allow,Deny
+Deny from all
+Satisfy all
+</Files>
+
+# Deny Harmful Query Strings
+<IfModule mod_rewrite.c>
+RewriteCond %{QUERY_STRING} ../   [NC,OR]
+RewriteCond %{QUERY_STRING} boot.ini [NC,OR]
+RewriteCond %{QUERY_STRING} tag= [NC,OR]
+RewriteCond %{QUERY_STRING} ftp: [NC,OR]
+RewriteCond %{QUERY_STRING} http: [NC,OR]
+RewriteCond %{QUERY_STRING} https:   [NC,OR]
+RewriteCond %{QUERY_STRING} mosConfig [NC,OR]
+RewriteCond %{QUERY_STRING} ^.*([|]|(|)|<|>|'|"|;|?|*).* [NC,OR]
+RewriteCond %{QUERY_STRING} ^.*(%22|%27|%3C|%3E|%5C|%7B|%7C).* [NC,OR]
+RewriteCond %{QUERY_STRING} ^.*(%0|%A|%B|%C|%D|%E|%F|127.0).* [NC,OR]
+RewriteCond %{QUERY_STRING} ^.*(globals|encode|config|localhost|loopback).* [NC,OR]
+RewriteCond %{QUERY_STRING} ^.*(request|select|insert|union|declare|drop).* [NC]
+RewriteRule ^(.*)$ - [F,L]
+</IfModule>
+
+# Deny Comments via Proxy Server
+RewriteCond %{REQUEST_METHOD} =POST
+RewriteCond %{HTTP:VIA}%{HTTP:FORWARDED}%{HTTP:USERAGENT_VIA}%{HTTP:X_FORWARDED_FOR}%{HTTP:PROXY_CONNECTION} !^$ [OR]
+RewriteCond %{HTTP:XPROXY_CONNECTION}%{HTTP:HTTP_PC_REMOTE_ADDR}%{HTTP:HTTP_CLIENT_IP} !^$
+RewriteCond %{REQUEST_URI} !^/(wp-login.php|wp-admin/|wp-content/plugins/|wp-includes/).* [NC]
+RewriteRule .* - [F,NS,L]
+
+
+# Secure wp-config.php
+<files wp-config.php>
+Order Allow,Deny
+Deny from all
+Satisfy all
+</files>
+
+# Secure php.ini
+<files php.ini>
+Order Allow,Deny
+Deny from all
+Satisfy all
+</files>
+
+# Secure error_log
+<filesMatch "^(error_log)$">
+Order Allow,Deny
+Deny from all
+Satisfy all
+</filesMatch>
