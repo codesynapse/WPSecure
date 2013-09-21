@@ -30,6 +30,15 @@
 - [WP-DB-Backup](http://wordpress.org/plugins/wp-db-backup/)
 
 
+# WordPress Secure Hosting
+
+- [WPEngine](http://onecore.net/go/wpengine)
+- [ZippyKid](http://zippykid.com)
+- [Synthesis](http://websynthesis.com)
+- [Page.ly](http://onecore.net/go/pagely)
+
+
+
 # Hosted Backup Services
 
 - VaultPress
@@ -41,9 +50,3 @@
 - CodeGuard
 
 
-# WordPress Secure Hosting
-
-- [WPEngine](http://onecore.net/go/wpengine)
-- [ZippyKid](http://zippykid.com)
-- [Synthesis](http://websynthesis.com)
-- [Page.ly](http://onecore.net/go/pagely)
