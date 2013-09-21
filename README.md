@@ -6,19 +6,19 @@
 
 - [Sucuri WordPress Security Plugin](http://onecore.net/go/sucuri)
 
-- [Login Lockdown](wordpress.org/plugins/login-lockdown/)
+- [Login Lockdown](http://wordpress.org/plugins/login-lockdown/)
 
-- [WordPress Firewall 2](wordpress.org/plugins/wordpress-firewall-2/‎)
+- [WordPress Firewall 2](http://wordpress.org/plugins/wordpress-firewall-2/‎)
 
-- [Block Bad Queries](wordpress.org/plugins/block-bad-queries/‎)
+- [Block Bad Queries](http://wordpress.org/plugins/block-bad-queries/‎)
 
-- [WordPress File Monitor Plus](wordpress.org/plugins/wordpress-file-monitor-plus/‎)
+- [WordPress File Monitor Plus](http://wordpress.org/plugins/wordpress-file-monitor-plus/‎)
 
-- [WP Security Scan](wordpress.org/plugins/wp-security-scan/‎)
+- [WP Security Scan](http://wordpress.org/plugins/wp-security-scan/‎)
 
-- [Wordfence](wordpress.org/plugins/wordfence/‎)
+- [Wordfence](http://wordpress.org/plugins/wordfence/‎)
 
-- [Antivirus](wordpress.org/plugins/antivirus/‎)
+- [Antivirus](http://wordpress.org/plugins/antivirus/‎)
 
 
 # WordPress Backup Plugins
@@ -36,8 +36,6 @@
 - [ZippyKid](http://zippykid.com)
 - [Synthesis](http://websynthesis.com)
 - [Page.ly](http://onecore.net/go/pagely)
-
-
 
 # Hosted Backup Services
 
