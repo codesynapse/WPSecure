@@ -23,6 +23,8 @@
 
 # WordPress Backup Plugins
 
+- [ManageWP](http://onecore.net/go/managewp/)
+
 - [WP-DB Manager](http://wordpress.org/plugins/wp-dbmanager/‎)
 
 - [BackWPup](http://wordpress.org/plugins/backwpup/‎)
